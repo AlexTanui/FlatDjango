@@ -1,0 +1,18 @@
+{
+  "name": "week-3-code-challenge",
+  "version": "1.0.0",
+  "description": "Flatirion movie store",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch ./database/db.json"
+  },
+  "keywords": [
+    "movie",
+    "api"
+  ],
+  "author": "Alex Tanui",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.1"
+  }
+}

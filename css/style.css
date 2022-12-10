@@ -1,0 +1,19 @@
+
+
+#top-mov{
+    padding-left: 10px;
+    padding-right: 0px;
+    padding-top: 10px;
+}
+h5{
+    color: red;
+}
+#movies{
+    display: block;
+    width: 285px;
+    height: 250px;
+}
+#append{
+    max-width: fit-content;
+    justify-content: space-between;
+}
