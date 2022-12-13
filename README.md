@@ -6,12 +6,14 @@ This is an application that allowsa a user to buy ticket for feveroutite movie i
 The challenge was used to test our knowledge in JavaScript. The test included , DOM manipulation, arrays and using fetch method. 
 
 ## Built with
-This application was built with the following technologies:
+This application was built with the following technologies: 
 
-    * HTML
-    * CSS
-    * JavaScript
-    * Bootstrap
+* HTML
+* CSS
+* JavaScript
+* Bootstrap
+
+   
 
 ## Running The Live Hosted Application
 
