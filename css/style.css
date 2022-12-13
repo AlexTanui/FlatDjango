@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
 
 body{
@@ -12,6 +13,7 @@ body{
     font-size: 1.05rem;
     line-height: 1.6;
     font-family: 'Poppins', sans-serif;
+    
 }
 
 /*  */
@@ -29,6 +31,7 @@ body{
 /*  */
 .container{
     min-height: 100vh;
+    width: auto;
 }
 .movie-wrapper{
     max-width: 1280px;
@@ -36,7 +39,7 @@ body{
     padding: 2rem;
     background: #fff;
     text-align: center;
-    display: flex;
+    /* display: flex; */
    
 }
 
@@ -48,7 +51,7 @@ body{
 }
 .movie-item{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-direction: row;
     border-radius: 1rem;
     -webkit-border-radius: 1rem;
