@@ -2,8 +2,9 @@
 
 ## Discription
 
-This is an application that allowsa a user to buy ticket for feveroutite movie it uses a local API and build out the frontend.
-The challenge was used to test our knowledge in JavaScript. The test included , DOM manipulation, arrays and using fetch method. 
+This is an application that allowsa a user to buy ticket for favourite movie. it uses a local API that has been fetched from backend to
+ and build out the frontend.
+
 
 ## Built with
 This application was built with the following technologies: 
@@ -17,7 +18,7 @@ This application was built with the following technologies:
 
 ## Running The Live Hosted Application
 
-* open this [link](https://flatacutieschallenge.netlify.app/) on your browser to access the live web application
+* open this [link](https://alextanui.github.io/Flatiron-movie/) on your browser to access the live web application
 * you can also follow the link on the left side of the repository below the discription
 * on the browser there are five dropdown link to individual animal which i did for privacy for votes
 * click on the link and get a ticket for the chosen movie.Once the tickets are depleted a user cannot access the movie
@@ -34,7 +35,7 @@ Open a terminal / command line interface on your computer
 
 * Clone the repo by using the following to create a copy on your local machine:
 
- `` git clone https://https://github.com/AlexTanui/week-one-code-challenge``
+ `` git clone https://https://github.com/AlexTanuiFlatiron-movie``
 * Change directory to the repo folder:
 
  `` cd /mnt/d..``
