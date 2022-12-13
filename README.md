@@ -8,10 +8,10 @@ The challenge was used to test our knowledge in JavaScript. The test included , 
 ## Built with
 This application was built with the following technologies:
 
-    *HTML
-    *CSS
-    *JavaScript
-    *Bootstrap
+    * HTML
+    * CSS
+    * JavaScript
+    * Bootstrap
 
 ## Running The Live Hosted Application
 
