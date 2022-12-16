@@ -1,86 +1,61 @@
-const url = "https://api.npoint.io/38aebdb16c6ba20c7efb/films/"
-let info = document.getElementById("append")
-let leftList = document.getElementById("list")
-const searchBtn1 = document.getElementById("searchBtn")
-const input = document.getElementById("search").value
+const url="https://api.npoint.io/ba70976d5586ac1943d8/films/"
+const cartoon = document.getElementById('minions')
+function fetchFilms() {
+    fetch(`${url}`)
+      .then((res) => res.json())
+      .then((data) => renderFilms(data));
+  }
+  function renderFilms(data) {
+    const div = document.getElementById('card');
+    const ul = document.getElementById('films');
+    
+    data.forEach(movie => {
+      const li = document.createElement('li');
+      li.classList.add('pointer', 'bold-italic-text');
+      li.innerHTML = movie.title;
+      
+      const filmCard = document.createElement("div");
+      filmCard.classList.add('film-card');
+      filmCard.innerHTML = `
+        <img src="${movie.poster}" height=500px width=300px/>
+        <h2 class="bold-text">${movie.title}</h2>
+        <p class="bold-text">${movie.description}</p>
+        <p><span class="highlight bold-text">Runtime: ${movie.runtime}</span></p>
+        <p><span class="highlight bold-text">Showtime: ${movie.showtime}</span></p>
+      `;
+      document.getElementById('minions').style.display= "none"
+      // initate p tag element to show number of tickets
+      const tickets = document.createElement("p");
+      tickets.classList.add("bold-italic-text")
+      tickets.innerHTML = `Available tickets: ${(movie.capacity) - (movie.tickets_sold)}`;
+      // append the p tag 
+      filmCard.appendChild(tickets);
+   
+      const btn = document.createElement("button");
+      btn.textContent = "Get ticket";
+      // event listener to decrement ticket on dom
+      btn.addEventListener('click', () => {
+        //check if tickets are sold out then print alert
+        if (parseInt(tickets.innerText.split(': ')[1]) === 0) {
+          alert("sorry ticket diplited");
+        } else {
+          //reduce number of tickets 
+          tickets.innerText = `Available tickets: ${parseInt(tickets.innerText.split(': ')[1]) - 1}`;
+        }
+      });
+      filmCard.appendChild(btn);
 
-searchBtn1.addEventListener('click', flatMovies)
+      li.addEventListener('click', () => {
+        div.innerText=""
+        div.appendChild(filmCard);
+         if (!filmCard.classList.contains('active')) {
+          filmCard.classList.add('active');  
+          div.appendChild(filmCard);
 
-// fetch for displaying movies and description on the dom 
-fetch(`${url}${input}`).then((response) => response.json())
-    .then(json => {
-        json.map(data => {
-            console.log(data)
-            info.append(flatMovies(data))
-
-        })
-    })
-
-// funtion to print movies on dom
-
-function flatMovies({ title, runtime, showtime, description, poster, tickets_sold, id }) {
-
-    let details = document.createElement("container")
-    details.innerHTML = `
-                        <div id="append" class="movie-result">
-                        
-                                <div class="movie-item ">
-                                <div class="movie-img">
-                                    <img src="${poster}" alt="poster">
-                                </div>
-                                <div class="movie-name">
-                                    <h5>${title}</h5>
-                                    <p><em>${description}/em></p>
-                                    <p class="card-text">Runtime:  ${runtime}</p>
-                                    <p class="card-text">Show Time:  ${showtime}</p>
-                                    <p>Remaining tickets<p>
-                                    <p id="span${id}"><u>${tickets_sold}</u></p>
-                                    <button onclick="totalClick(-1, ${id})" id="tickets${id}" type="button" class="btn btn-danger">Get ticket</button>
-                                </div>
-                                </div>
-                                  
-                         </div>
-    `;
-
-
-
-    return details
-}
-// function for list on the left side 
-
-fetch(`${url}`).then((response) => response.json())
-    .then(json => {
-        json.map(data => {
-            console.log(data)
-            list.append(flatList(data))
-
-        })
-    })
-function flatList({ title }) {
-    let list = document.createElement("ol")
-    list.innerHTML = `
- 
-   <ol class="list-group">
-                <li class="list-group-item mt-2">${title}</li>
-                
-              </ol>
-          
+        }
         
-    `;
-    return list
-}
-flatList()
-
-// function to reduce the number of tickets once sold 
-function totalClick(clicks, id) {
-    const totalClicks = document.getElementById(`span${id}`)
-    const sumvalue = parseInt(totalClicks.innerText) + clicks
-    totalClicks.innerText = sumvalue
-
-    if (sumvalue < 0) {
-        totalClicks.innerText = 0
-        alert("sorry tickets diplited")
-    }
-    return totalClicks
-}
-totalClick()
+      });
+      ul.appendChild(li);
+    });
+  }
+  fetchFilms();

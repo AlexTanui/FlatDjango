@@ -2,8 +2,8 @@
 
 ## Discription
 
-This is an application that allows a a user to buy ticket for favourite movie. it uses a local API that has been fetched from backend to
- and build out the frontend.
+This is an application that allowsa a user to buy ticket for favourite movie. it uses a local API that has been fetched from backend to
+ and build out the frontend.The application starts with an animation introduction to capture the attention of the viewers then they are given an oppotunity to purchase a ticket.
 
 
 ## Built with
