@@ -18,9 +18,9 @@ This application was built with the following technologies:
 
 ## Running The Live Hosted Application
 
-* open this [link](https://alextanui.github.io/Flatiron-movie/) on your browser to access the live web application
-* you can also follow the link on the left side of the repository below the discription
-* on the browser there are five dropdown link to individual animal which i did for privacy for votes
+* open this [link](https://alextanui.github.io/FlatDjango/) on your browser to access the live web application
+* you can also follow the link on the right side of the repository below the discription
+* on the browser there is an introduction aninmation for buying ticket then the movie list loads. click on the list to view movie description and buy ticket on the further right of the page.
 * click on the link and get a ticket for the chosen movie.Once the tickets are depleted a user cannot access the movie
 
 ## Installation
